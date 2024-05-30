@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Kartın kapsam kutusu*/
+.container-product {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 350px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 1px 1px 5px 1px rgb(105, 78, 3);
+}
+/*kartın fotoğraf containeri*/
+.product-image {
+  width: 220px;
+  height: 300px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 1;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*kartın başlığı*/
+.product-name {
+  height: 50px;
+  color: #dd7200;
+  display: flex;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.4rem;
+  border-top: 2px solid #dd7200;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all 1s;
+  z-index: 2;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: absolute; /* Mutlak konumlandırma */
+  bottom: 0; /* Container'ın altına yerleştirmek için */
+  width: 100%; /* Genişliği tam yaparak container'ın tamamını kaplamasını sağla */
+}
+.product-name:hover {
+  height: 150px;
+  color: #ffffff;
+  background-color: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+.product-name:hover .product-info {
+  display: block;
+}
+
+/*Kartın açıklaması*/
+.product-info {
+  display: none;
+  height: 80px;
+  color: #ffffff;
+  font-family: "nunito";
+  font-weight: 400;
+  font-size: 1rem;
+}
